@@ -18,33 +18,33 @@ st.markdown("""
     /* 1. Main Title - Glowing Neon Rainbow Text Style */
     .vibrant-title {
         font-family: 'Playfair Display', 'Georgia', serif;
-        font-size: 44px !important;
+        font-size: 38px !important;
         font-weight: 900;
         color: #FFF;
         text-align: center;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         text-shadow: 0 0 10px #FF3366, 0 0 20px #FF9933, 0 0 30px #FFCC00;
         margin-bottom: 5px;
     }
     
     /* 2. Subtitle - Shimmering Vivid Gold */
     .vibrant-subtitle {
-        font-size: 19px;
+        font-size: 16px;
         font-weight: 700;
         text-align: center;
         color: #FFD700;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         margin-bottom: 30px;
         text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
     }
 
-    /* Luxury Holographic Card Container */
+    /* Luxury Holographic Card Container with Mobile-Friendly Padding */
     .luxury-glow-card {
         background: rgba(255, 255, 255, 0.05);
         backdrop-filter: blur(25px);
         -webkit-backdrop-filter: blur(25px);
         border: 2px solid #FF3366;
-        padding: 40px;
+        padding: 25px 15px;
         border-radius: 24px;
         box-shadow: 0 0 35px rgba(255, 51, 102, 0.35);
         margin-top: 25px;
@@ -54,9 +54,9 @@ st.markdown("""
     /* 3. Birthday Quote - Electric Cyan Glow Typography */
     .animated-quote {
         font-family: 'Lora', 'Georgia', serif;
-        font-size: 26px;
+        font-size: 22px;
         font-weight: 700;
-        line-height: 1.6;
+        line-height: 1.5;
         text-align: center;
         font-style: italic;
         color: #33CCFF;
@@ -66,10 +66,10 @@ st.markdown("""
 
     /* 4. Author Signature Tag */
     .animated-author {
-        font-size: 15px;
+        font-size: 13px;
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        letter-spacing: 3px;
         font-weight: 800;
         color: #FFCC00;
         margin-bottom: 35px;
@@ -79,10 +79,10 @@ st.markdown("""
     /* 5. Main Body Message - High Contrast Radiant Styles */
     .animated-body {
         font-family: 'Inter', sans-serif;
-        font-size: 19px;
+        font-size: 16px;
         color: #FFFFFF;
         text-align: center;
-        line-height: 2.0;
+        line-height: 1.8;
         font-weight: 500;
     }
     
@@ -105,20 +105,38 @@ st.markdown("""
         text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
     }
 
-    /* 6. Name Spotlight Panel - Full Color Wave Animation */
+    /* 6. Name Spotlight Panel - Responsive Font to Force Single Line on Mobile */
     .name-spotlight-panel {
         background: linear-gradient(-45deg, #FF3366, #FF9933, #33CCFF, #AE00FF);
         background-size: 300% 300%;
         color: #FFFFFF !important;
-        font-size: 30px !important;
+        font-size: 16px !important; /* Made smaller for flawless mobile rendering */
         font-weight: 900;
         text-align: center;
-        padding: 20px;
+        padding: 15px 10px;
         border-radius: 18px;
         margin-top: 35px;
         box-shadow: 0 10px 30px rgba(255, 51, 102, 0.5);
         text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         animation: gradientMove 4s ease infinite;
+        white-space: nowrap; /* Forces text to stay in one line */
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    @media (min-width: 480px) {
+        .name-spotlight-panel {
+            font-size: 24px !important;
+        }
+        .vibrant-title {
+            font-size: 44px !important;
+        }
+        .animated-quote {
+            font-size: 26px;
+        }
+        .animated-body {
+            font-size: 19px;
+        }
     }
 
     /* Smooth Entry Keyframe Animation */
@@ -138,7 +156,7 @@ st.markdown("""
         color: #FFFFFF !important;
         border: none !important;
         padding: 16px 32px !important;
-        font-size: 21px !important;
+        font-size: 18px !important;
         font-weight: 800 !important;
         border-radius: 50px !important;
         box-shadow: 0 6px 25px rgba(174, 0, 255, 0.5) !important;
@@ -167,7 +185,7 @@ if st.button("🎁 Open Your Magical Birthday Surprise 🌟", use_container_widt
         '    <p class="animated-quote">"The future belongs to those who believe in the beauty of their dreams."</p>'
         '    <p class="animated-author">🏆 — Eleanor Roosevelt</p>'
         '    <div class="animated-body">'
-        '        <span class="neon-pink" style="font-size: 24px;">Happy Birthday! 🎉🎂🎈</span><br><br>'
+        '        <span class="neon-pink" style="font-size: 22px;">Happy Birthday! 🎉🎂🎈</span><br><br>'
         '        It is a profound privilege to guide a student with your '
         '        <span class="neon-cyan">brilliant intellect</span>, '
         '        relentless dedication, and unwavering curiosity. Your potential is absolutely limitless, '
