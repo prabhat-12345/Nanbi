@@ -123,23 +123,18 @@ if st.button("✨ Reveal Your Birthday Wish ✨", use_container_width=True):
     st.balloons() # Premium built-in cloud animations
     st.snow()     # Soft floating particle effect overlay
     
-    st.markdown("""
-    <div class="luxury-card">
-        <p class="quote-text">
-            "The future belongs to those who believe in the beauty of their dreams."
-        </p>
-        <p class="author-tag">— Eleanor Roosevelt</p>
-        
-        <p class="message-text">
-            <strong>Happy Birthday!</strong><br><br>
-            It is a profound privilege to guide a student with your intellect, 
-            dedication, and unwavering curiosity. Your potential is limitless, 
-            and I have no doubt that your journey ahead will be nothing short of extraordinary.<br><br>
-            May this year unlock brilliant new opportunities, absolute happiness, 
-            and the grand success you so deeply deserve. Keep shining bright!
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
+    # Cleaned single line HTML string to avoid rendering issues on Streamlit Cloud
+    html_content = (
+        '<div class="luxury-card">'
+        '<p class="quote-text">"The future belongs to those who believe in the beauty of their dreams."</p>'
+        '<p class="author-tag">— Eleanor Roosevelt</p>'
+        '<p class="message-text"><strong>Happy Birthday!</strong><br><br>'
+        'It is a profound privilege to guide a student with your intellect, dedication, and unwavering curiosity. '
+        'Your potential is limitless, and I have no doubt that your journey ahead will be nothing short of extraordinary.<br><br>'
+        'May this year unlock brilliant new opportunities, absolute happiness, and the grand success you so deeply deserve. Keep shining bright!</p>'
+        '</div>'
+    )
+    st.markdown(html_content, unsafe_allow_html=True)
 else:
     st.markdown("<p style='text-align: center; color: #6B7280; font-size: 15px; margin-top: 50px;'>Click the golden portal above to reveal your message.</p>", unsafe_allow_html=True)
     
