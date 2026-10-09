@@ -7,10 +7,10 @@ st.set_page_config(
     layout="centered"
 )
 
-# Premium Custom CSS for Rich Multi-Color Typography and Glowing Card Elements
+# Premium Custom CSS for Multi-Color Animated Texts & Shimmering Gradients
 st.markdown("""
     <style>
-    /* Dark Premium Galactic Background */
+    /* Premium Cosmic Space Background */
     .stApp {
         background: linear-gradient(135deg, #090514 0%, #161233 50%, #290229 100%);
     }
@@ -57,7 +57,7 @@ st.markdown("""
         animation: smoothPop 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* 3. Birthday Quote - Neon Cyberpunk Pink-Blue Polish */
+    /* 3. Main Birthday Quote - Neon Cyberpunk Pink-Blue Polish */
     .animated-quote {
         font-family: 'Lora', 'Georgia', serif;
         font-size: 26px;
@@ -104,25 +104,20 @@ st.markdown("""
         font-weight: bold;
     }
 
-    /* 6. Name Spotlight Panel - Mega Colorful Moving Wave with Responsive Font Size */
+    /* 6. Student Name Spotlight Panel - Mega Colorful Moving Wave */
     .name-spotlight-panel {
         background: linear-gradient(-45deg, #FF3366, #FF9933, #33CCFF, #AE00FF);
         background-size: 300% 300%;
         color: white !important;
-        
-        /* Responsive font calculation forces a single line on mobile screens */
-        font-size: calc(14px + 1.8vw) !important; 
+        font-size: 28px !important;
         font-weight: 900;
         text-align: center;
-        padding: 18px 10px;
+        padding: 18px;
         border-radius: 15px;
         margin-top: 35px;
         box-shadow: 0 10px 30px rgba(255, 51, 102, 0.4);
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
         animation: gradientMove 4s ease infinite;
-        
-        white-space: nowrap; /* Rigid rule to stop text from shifting to next line */
-        overflow: hidden;
     }
 
     /* Keyframe Animations Engine */
