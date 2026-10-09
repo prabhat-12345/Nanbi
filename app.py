@@ -1,140 +1,154 @@
 import streamlit as st
+import time
 
-# Premium Page Configuration
+# Premium Page Configuration with colorful emojis
 st.set_page_config(
-    page_title="Happy Birthday | Excellence Awaits", 
-    page_icon="✨", 
+    page_title="Happy Birthday Nandanipriyadarshini! 🌟", 
+    page_icon="🎂", 
     layout="centered"
 )
 
-# Premium Custom CSS & CSS Keyframe Animations
+# Premium Custom CSS for Vivid Colors, Glowing Text, and Fluid Animations
 st.markdown("""
     <style>
-    /* Premium Gradient Background */
+    /* Vibrant Premium Cosmic Background */
     .stApp {
-        background: linear-gradient(135deg, #111827 0%, #312E81 100%);
+        background: linear-gradient(135deg, #0f0c20 0%, #24243e 50%, #300030 100%);
     }
     
-    /* Elegant Title with Glow and Fade-in Animation */
-    .premium-title {
+    /* Glowing Title with Colorful Gradient and Animation */
+    .vibrant-title {
         font-family: 'Playfair Display', 'Georgia', serif;
-        font-size: 42px !important;
-        font-weight: 700;
-        background: linear-gradient(to right, #FDE68A, #F59E0B);
+        font-size: 45px !important;
+        font-weight: 900;
+        background: linear-gradient(45deg, #FF3366, #FF9933, #FFCC00, #33CCFF);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
         margin-bottom: 5px;
-        letter-spacing: 1px;
-        animation: fadeInDown 1.5s ease-out;
+        letter-spacing: 1.5px;
+        filter: drop-shadow(0px 2px 10px rgba(255,51,102,0.3));
+        animation: glowPulse 2s infinite alternate;
     }
     
-    .premium-subtitle {
-        color: #9CA3AF;
+    .vibrant-subtitle {
+        color: #E0E0E0;
         text-align: center;
-        font-size: 16px;
-        font-style: italic;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
         margin-bottom: 30px;
-        animation: fadeIn 2s ease-out;
     }
 
-    /* Luxury Card Design */
-    .luxury-card {
-        background: rgba(255, 255, 255, 0.04);
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-        border: 1px solid rgba(253, 230, 138, 0.2);
+    /* Luxury Holographic Card Design */
+    .luxury-glow-card {
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 2px solid rgba(255, 204, 0, 0.4);
         padding: 40px;
         border-radius: 24px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        margin-top: 20px;
-        animation: scaleUp 1s cubic-bezier(0.16, 1, 0.3, 1);
+        box-shadow: 0 0 30px rgba(255, 153, 51, 0.25);
+        margin-top: 25px;
+        animation: popUp 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    /* Student Name Spotlight Panel */
+    .name-spotlight {
+        background: linear-gradient(90deg, #FF3366, #FF9933);
+        color: white !important;
+        font-size: 28px !important;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        border-radius: 15px;
+        margin-top: 25px;
+        box-shadow: 0 10px 25px rgba(255, 51, 102, 0.4);
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
     }
 
     /* English Quote Typography */
     .quote-text {
         font-family: 'Lora', 'Georgia', serif;
         font-size: 24px;
-        color: #FEE2E2;
+        color: #FFF5E6;
         line-height: 1.6;
         text-align: center;
         font-style: italic;
-        margin-bottom: 25px;
+        margin-bottom: 20px;
     }
 
     .author-tag {
         font-size: 14px;
-        color: #F59E0B;
+        color: #FFCC00;
         text-align: center;
         text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 600;
-        margin-bottom: 30px;
-    }
-
-    /* Message Typography */
-    .message-text {
-        font-family: 'Inter', sans-serif;
-        font-size: 17px;
-        color: #D1D5DB;
-        text-align: center;
-        line-height: 1.8;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin-bottom: 35px;
     }
 
     /* Keyframe Animations */
-    @keyframes fadeInDown {
-        0% { opacity: 0; transform: translateY(-20px); }
-        100% { opacity: 1; transform: translateY(0); }
+    @keyframes glowPulse {
+        0% { filter: drop-shadow(0px 2px 8px rgba(255,51,102,0.3)); }
+        100% { filter: drop-shadow(0px 4px 20px rgba(51,204,255,0.6)); }
     }
-    @keyframes fadeIn {
-        0% { opacity: 0; }
-        100% { opacity: 1; }
-    }
-    @keyframes scaleUp {
-        0% { opacity: 0; transform: scale(0.95); }
+    @keyframes popUp {
+        0% { opacity: 0; transform: scale(0.9); }
         100% { opacity: 1; transform: scale(1); }
     }
     
-    /* Premium Styled Button Overrides */
+    /* Colorful Custom Button Styling */
     div.stButton > button:first-child {
-        background: linear-gradient(135deg, #D97706 0%, #B45309 100%) !important;
+        background: linear-gradient(45deg, #FF3366 0%, #FF9933 100%) !important;
         color: #FFFFFF !important;
         border: none !important;
-        padding: 12px 24px !important;
-        font-size: 18px !important;
-        font-weight: 600 !important;
-        border-radius: 12px !important;
-        box-shadow: 0 4px 15px rgba(180, 83, 9, 0.4) !important;
-        transition: all 0.3s ease !important;
+        padding: 15px 30px !important;
+        font-size: 20px !important;
+        font-weight: 700 !important;
+        border-radius: 50px !important;
+        box-shadow: 0 5px 25px rgba(255, 51, 102, 0.5) !important;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) !important;
+        letter-spacing: 1px;
     }
     div.stButton > button:first-child:hover {
-        transform: translateY(-2px) !important;
-        box-shadow: 0 6px 20px rgba(180, 83, 9, 0.6) !important;
+        transform: scale(1.03) translateY(-3px) !important;
+        background: linear-gradient(45deg, #FF9933 0%, #FF3366 100%) !important;
+        box-shadow: 0 8px 30px rgba(255, 153, 51, 0.7) !important;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# Layout Setup
-st.markdown('<h1 class="premium-title">A Celebration of Excellence</h1>', unsafe_allow_html=True)
-st.markdown('<p class="premium-subtitle">Dedicated to an exceptional student on their special day</p>', unsafe_allow_html=True)
+# Layout Header Structure
+st.markdown('<h1 class="vibrant-title">✨ A Celebration of Excellence ✨</h1>', unsafe_allow_html=True)
+st.markdown('<p class="vibrant-subtitle">🌈 Dedicated to an exceptional mind on her special day 📚</p>', unsafe_allow_html=True)
 
-# Button to unlock premium view & triggers high-end cloud animation
-if st.button("✨ Reveal Your Birthday Wish ✨", use_container_width=True):
-    st.balloons() # Premium built-in cloud animations
-    st.snow()     # Soft floating particle effect overlay
+# Main Action Button for Celebration
+if st.button("🎁 Open Your Magical Birthday Surprise 🌟", use_container_width=True):
+    # Multi-layered rich animation effects on cloud runtime
+    st.balloons() 
+    st.snow()     
     
-    # Cleaned single line HTML string to avoid rendering issues on Streamlit Cloud
-    html_content = (
-        '<div class="luxury-card">'
-        '<p class="quote-text">"The future belongs to those who believe in the beauty of their dreams."</p>'
-        '<p class="author-tag">— Eleanor Roosevelt</p>'
-        '<p class="message-text"><strong>Happy Birthday!</strong><br><br>'
-        'It is a profound privilege to guide a student with your intellect, dedication, and unwavering curiosity. '
-        'Your potential is limitless, and I have no doubt that your journey ahead will be nothing short of extraordinary.<br><br>'
-        'May this year unlock brilliant new opportunities, absolute happiness, and the grand success you so deeply deserve. Keep shining bright!</p>'
+    # Safe Single-string clean HTML rendering framework
+    card_html = (
+        '<div class="luxury-glow-card">'
+        '    <p class="quote-text">"The future belongs to those who believe in the beauty of their dreams."</p>'
+        '    <p class="author-tag">🏆 — Eleanor Roosevelt</p>'
+        '    <div style="font-family: \'Inter\', sans-serif; font-size: 17px; color: #E5E7EB; text-align: center; line-height: 1.8;">'
+        '        <strong>Happy Birthday! 🎉🎂🎈</strong><br><br>'
+        '        It is a profound privilege to guide a student with your brilliant intellect, '
+        '        relentless dedication, and unwavering curiosity. Your potential is absolutely limitless, '
+        '        and I have no doubt that your journey ahead will be nothing short of extraordinary.🚀<br><br>'
+        '        May this wonderful year unlock dazzling new opportunities, profound happiness, '
+        '        and the spectacular success you so deeply deserve. Keep shining like the bright star you are!🌟⭐'
+        '    </div>'
+        '    <div class="name-spotlight">✨ Happy Birthday Nandanipriyadarshini! 👑🎂</div>'
         '</div>'
     )
-    st.markdown(html_content, unsafe_allow_html=True)
+    st.markdown(card_html, unsafe_allow_html=True)
+    
+    # Bottom success toast banner
+    st.toast("Wishing you the most colorful and splendid birthday ever! 🥳🧁🎉", icon="💖")
 else:
-    st.markdown("<p style='text-align: center; color: #6B7280; font-size: 15px; margin-top: 50px;'>Click the golden portal above to reveal your message.</p>", unsafe_allow_html=True)
+    st.markdown("<p style='text-align: center; color: #9CA3AF; font-size: 16px; margin-top: 60px; font-weight: 500;'>👉 Click the magical glowing portal above to reveal your message!</p>", unsafe_allow_html=True)
     
