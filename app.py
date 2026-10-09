@@ -7,57 +7,51 @@ st.set_page_config(
     layout="centered"
 )
 
-# Premium Custom CSS for Multi-Color Animated Texts & Shimmering Gradients
+# Premium Custom CSS for Rich Multi-Color Typography and Glowing Card Elements
 st.markdown("""
     <style>
-    /* Premium Cosmic Space Background */
+    /* Dark Premium Galactic Background */
     .stApp {
         background: linear-gradient(135deg, #090514 0%, #161233 50%, #290229 100%);
     }
     
-    /* 1. Main Title - Mega Rainbow Glow Animation */
+    /* 1. Main Title - Glowing Neon Rainbow Text Style */
     .vibrant-title {
         font-family: 'Playfair Display', 'Georgia', serif;
-        font-size: 46px !important;
+        font-size: 44px !important;
         font-weight: 900;
-        background: linear-gradient(45deg, #FF3366, #FF9933, #FFCC00, #33CCFF, #AE00FF);
-        background-size: 400% 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #FFF;
         text-align: center;
         letter-spacing: 2px;
-        animation: rainbowShift 6s ease infinite, glowPulse 2s infinite alternate;
+        text-shadow: 0 0 10px #FF3366, 0 0 20px #FF9933, 0 0 30px #FFCC00;
+        margin-bottom: 5px;
     }
     
-    /* 2. Subtitle - Elegant Gold Shimmer */
+    /* 2. Subtitle - Shimmering Vivid Gold */
     .vibrant-subtitle {
         font-size: 19px;
-        font-weight: 600;
+        font-weight: 700;
         text-align: center;
-        background: linear-gradient(to right, #FFD700, #FFA500, #FFD700);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        letter-spacing: 1px;
+        color: #FFD700;
+        letter-spacing: 1.5px;
         margin-bottom: 30px;
-        animation: shineText 3s linear infinite;
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
     }
 
-    /* Luxury Card Design with Neon Borders */
+    /* Luxury Holographic Card Container */
     .luxury-glow-card {
         background: rgba(255, 255, 255, 0.05);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 2px solid transparent;
-        border-image: linear-gradient(45deg, #FF3366, #33CCFF) 1;
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
+        border: 2px solid #FF3366;
         padding: 40px;
         border-radius: 24px;
-        box-shadow: 0 0 35px rgba(255, 51, 102, 0.2);
+        box-shadow: 0 0 35px rgba(255, 51, 102, 0.35);
         margin-top: 25px;
         animation: smoothPop 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    /* 3. Main Birthday Quote - Neon Cyberpunk Pink-Blue Polish */
+    /* 3. Birthday Quote - Electric Cyan Glow Typography */
     .animated-quote {
         font-family: 'Lora', 'Georgia', serif;
         font-size: 26px;
@@ -65,15 +59,12 @@ st.markdown("""
         line-height: 1.6;
         text-align: center;
         font-style: italic;
-        background: linear-gradient(90deg, #33CCFF, #FF3366, #33CCFF);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: #33CCFF;
+        text-shadow: 0 0 10px rgba(51, 204, 255, 0.8), 0 0 20px rgba(51, 204, 255, 0.4);
         margin-bottom: 15px;
-        animation: shineText 4s linear infinite;
     }
 
-    /* 4. Author Name - Gold Radiant Pulse */
+    /* 4. Author Signature Tag */
     .animated-author {
         font-size: 15px;
         text-align: center;
@@ -82,68 +73,66 @@ st.markdown("""
         font-weight: 800;
         color: #FFCC00;
         margin-bottom: 35px;
+        text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+    }
+
+    /* 5. Main Body Message - High Contrast Radiant Styles */
+    .animated-body {
+        font-family: 'Inter', sans-serif;
+        font-size: 19px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 2.0;
+        font-weight: 500;
+    }
+    
+    /* Neon Text Modifiers for Important Sentences */
+    .neon-pink {
+        color: #FF3366;
+        font-weight: 700;
+        text-shadow: 0 0 8px rgba(255, 51, 102, 0.6);
+    }
+    
+    .neon-cyan {
+        color: #00FFCC;
+        font-weight: 700;
+        text-shadow: 0 0 8px rgba(0, 255, 204, 0.6);
+    }
+    
+    .neon-gold {
+        color: #FFCC00;
+        font-weight: 700;
         text-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
     }
 
-    /* 5. Main Body Message - Clean Pastel Vibrant Style */
-    .animated-body {
-        font-family: 'Inter', sans-serif;
-        font-size: 18px;
-        color: #F3F4F6;
-        text-align: center;
-        line-height: 1.9;
-        background: linear-gradient(120deg, #FFFFFF 0%, #E2E8F0 50%, #CBD5E1 100%);
-        -webkit-background-clip: text;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-    
-    .highlight-word {
-        background: linear-gradient(to right, #00FFCC, #33CCFF);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: bold;
-    }
-
-    /* 6. Student Name Spotlight Panel - Mega Colorful Moving Wave */
+    /* 6. Name Spotlight Panel - Full Color Wave Animation */
     .name-spotlight-panel {
         background: linear-gradient(-45deg, #FF3366, #FF9933, #33CCFF, #AE00FF);
         background-size: 300% 300%;
-        color: white !important;
-        font-size: 28px !important;
+        color: #FFFFFF !important;
+        font-size: 30px !important;
         font-weight: 900;
         text-align: center;
-        padding: 18px;
-        border-radius: 15px;
+        padding: 20px;
+        border-radius: 18px;
         margin-top: 35px;
-        box-shadow: 0 10px 30px rgba(255, 51, 102, 0.4);
-        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 10px 30px rgba(255, 51, 102, 0.5);
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
         animation: gradientMove 4s ease infinite;
     }
 
-    /* Keyframe Animations Engine */
-    @keyframes rainbowShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
+    /* Smooth Entry Keyframe Animation */
     @keyframes gradientMove {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
-    }
-    @keyframes shineText {
-        to { background-position: 200% center; }
-    }
-    @keyframes glowPulse {
-        0% { filter: drop-shadow(0px 0px 5px rgba(255,51,102,0.4)); }
-        100% { filter: drop-shadow(0px 0px 20px rgba(51,204,255,0.8)); }
     }
     @keyframes smoothPop {
         0% { opacity: 0; transform: scale(0.96) translateY(10px); }
         100% { opacity: 1; transform: scale(1) translateY(0); }
     }
     
-    /* Grand Golden Interactive Button Overrides */
+    /* Elegant Button Architecture Override */
     div.stButton > button:first-child {
         background: linear-gradient(45deg, #FF3366 0%, #AE00FF 100%) !important;
         color: #FFFFFF !important;
@@ -163,7 +152,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Layout Structure
+# Main Title Framework
 st.markdown('<h1 class="vibrant-title">✨ A Celebration of Excellence ✨</h1>', unsafe_allow_html=True)
 st.markdown('<p class="vibrant-subtitle">🌈 Dedicated to an exceptional mind on her special day 📚</p>', unsafe_allow_html=True)
 
@@ -172,18 +161,20 @@ if st.button("🎁 Open Your Magical Birthday Surprise 🌟", use_container_widt
     st.balloons() 
     st.snow()     
     
-    # Fully Compiled HTML Layout with Explicit Text Classes
+    # Pure High-Contrast Multi-Color Structured Text Layout
     card_html = (
         '<div class="luxury-glow-card">'
         '    <p class="animated-quote">"The future belongs to those who believe in the beauty of their dreams."</p>'
         '    <p class="animated-author">🏆 — Eleanor Roosevelt</p>'
         '    <div class="animated-body">'
-        '        <strong>Happy Birthday! 🎉🎂🎈</strong><br><br>'
-        '        It is a profound privilege to guide a student with your <span class="highlight-word">brilliant intellect</span>, '
+        '        <span class="neon-pink" style="font-size: 24px;">Happy Birthday! 🎉🎂🎈</span><br><br>'
+        '        It is a profound privilege to guide a student with your '
+        '        <span class="neon-cyan">brilliant intellect</span>, '
         '        relentless dedication, and unwavering curiosity. Your potential is absolutely limitless, '
         '        and I have no doubt that your journey ahead will be nothing short of extraordinary.🚀<br><br>'
-        '        May this wonderful year unlock dazzling new opportunities, profound happiness, '
-        '        and the spectacular success you so deeply deserve. Keep shining like the bright star you are!🌟⭐'
+        '        May this wonderful year unlock <span class="neon-gold">dazzling new opportunities</span>, '
+        '        profound happiness, and the spectacular success you so deeply deserve. '
+        '        Keep shining like the bright star you are!🌟⭐'
         '    </div>'
         '    <div class="name-spotlight-panel">👑 Happy Birthday Nandanipriyadarshini! 👑</div>'
         '</div>'
